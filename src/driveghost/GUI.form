@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JFileChooser" name="fileChooser">
+      <Properties>
+        <Property name="fileSelectionMode" type="int" value="1"/>
+      </Properties>
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <AccessibilityProperties>
+    <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Drive Ghost"/>
+  </AccessibilityProperties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="progress" max="32767" attributes="0"/>
+                  <Component id="doGhost" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="numberOfFilesLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="numberOfFiles" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="srcLoc" alignment="0" max="-2" attributes="0"/>
+                          <Component id="selectSource" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="destLoc" max="32767" attributes="0"/>
+                          <Component id="selectDestination" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="selectSource" pref="35" max="32767" attributes="0"/>
+                  <Component id="selectDestination" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="srcLoc" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="destLoc" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="numberOfFilesLabel" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                  <Component id="numberOfFiles" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="64" max="32767" attributes="0"/>
+              <Component id="doGhost" min="-2" pref="40" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="progress" min="-2" pref="35" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="selectSource">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Select drive"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="selectSourceActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="selectDestination">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Select ghost folder"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="selectDestinationActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="srcLoc">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="columns" type="int" value="20"/>
+        <Property name="text" type="java.lang.String" value="No source drive/folder selected."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="destLoc">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="columns" type="int" value="20"/>
+        <Property name="text" type="java.lang.String" value="No destination folder selected."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="numberOfFilesLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Number of files:"/>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="numberOfFilesLabel.setVisible(false);"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="numberOfFiles">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="text" type="java.lang.String" value="counting..."/>
+        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="horizontalTextPosition" type="int" value="0"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="numberOfFiles.setVisible(false);"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="doGhost">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ghost !"/>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="doGhostActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JProgressBar" name="progress">
+      <Properties>
+        <Property name="stringPainted" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>
